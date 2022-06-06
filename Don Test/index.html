@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="http://localhost:3000/app.js" defer></script>
+    <title>Test</title>
+  </head>
+  <style>
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 20vh;
+    }
+    .container2 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      padding: 10px;
+    }
+    .container > * {
+      margin: 10px;
+    }
+    .container > *:not(:last-child) {
+      border-bottom: 1px solid #ccc;
+    }
+    input focus {
+      outline: none;
+    }
+    input {
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+    .button {
+      border: none;
+      padding: 10px;
+      background-color: #4caf50;
+      color: white;
+      cursor: pointer;
+    }
+    .button:hover {
+      background-color: #45a049;
+    }
+  </style>
+  <body>
+    <div class="container" id="app"></div>
+    <!-- input -->
+    <div class="container">
+      <input id="input" placeholder="is palindrome ?" type="text" value="" />
+      <button class="button" id="button">Check</button>
+      <div id="output"></div>
+    </div>
+
+    <!-- INPUT contact form  -->
+
+    <div class="container2">
+      <form id="contactForm" class="inside">
+        <input id="name" placeholder="name" type="text" value="" />
+        <input id="surname" placeholder="surname" type="text" value="" />
+        <input id="email" placeholder="email" type="text" value="" />
+        <input id="phone" placeholder="phone" type="text" value="" />
+        <button class="button" type="submit">Submit</button>
+      </form>
+    </div>
+
+    <!-- INPUT contact form  -->
+    <!-- OUTPUT contact form -->
+
+    <div class="container2">
+      <div id="contactFormOutput"></div>
+    </div>
+    <div class="container2">
+      <div id="outputMsg"></div>
+    </div>
+  </body>
+</html>
